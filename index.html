@@ -101,6 +101,18 @@
     transition:color .15s ease;
   }
   .nav-links a:hover{color:var(--ink);}
+  .nav-x{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    width:32px;
+    height:32px;
+    border-radius:8px;
+    border:1px solid var(--line);
+    color:var(--ink);
+    transition:border-color .15s ease, background .15s ease;
+  }
+  .nav-x:hover{border-color:var(--sky-500); background:var(--sky-100);}
   @media (max-width:640px){ .nav-links{gap:16px; font-size:0.82rem;} }
 
   /* ---------- hero ---------- */
@@ -445,6 +457,9 @@
         <a href="#how">How I work</a>
         <a href="https://huggingface.co/Sahek" target="_blank" rel="noopener">Hugging Face</a>
         <a href="https://github.com/kaymyg" target="_blank" rel="noopener">GitHub</a>
+        <a class="nav-x" href="https://x.com/kay_myg" target="_blank" rel="noopener" aria-label="kaymyg on X">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        </a>
       </div>
     </nav>
   </div>
@@ -610,6 +625,7 @@
       <div class="footer-links">
         <a class="btn btn-primary" href="https://huggingface.co/Sahek" target="_blank" rel="noopener">Hugging Face</a>
         <a class="btn btn-ghost" href="https://github.com/kaymyg" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn btn-ghost" href="https://x.com/kay_myg" target="_blank" rel="noopener">X</a>
       </div>
     </div>
     <div class="footer-note">kaymyg.brave — self-taught, hobbyist, building anyway.</div>
