@@ -352,6 +352,7 @@
   }
   .tag-live{background:rgba(79,180,119,0.14); color:#2E8F55;}
   .tag-explore{background:rgba(242,166,90,0.16); color:#B9762F;}
+  .tag-early{background:rgba(82,105,125,0.14); color:var(--slate);}
   .card p{
     color:var(--slate);
     font-size:0.96rem;
@@ -453,6 +454,7 @@
       <div class="brand"><span class="brand-dot"></span>kaymyg</div>
       <div class="nav-links">
         <a href="#building">Building</a>
+        <a href="#early-stage">Early-stage</a>
         <a href="#exploring">Exploring</a>
         <a href="#how">How I work</a>
         <a href="https://huggingface.co/Sahek" target="_blank" rel="noopener">Hugging Face</a>
@@ -528,7 +530,7 @@
             <h3>lean-agent-governance</h3>
             <span class="tag tag-live">active · v8.0</span>
           </div>
-          <p>A drop-in governance layer for AI coding agents. Sandboxes execution in a read-only host / read-write tmpfs split, caps patch size before anything reaches <span class="mono">git apply</span>, enforces session timeouts, and normalizes prompt-injection detection against zero-width and bidi-override smuggling.</p>
+          <p>A drop-in governance layer for AI coding agents. Sandboxes execution in a read-only host / read-write tmpfs split, caps patch size before anything reaches <span class="mono">git apply</span>, enforces session timeouts, and normalizes prompt-injection detection against zero-width and bidi-override smuggling. A forward-looking x402 protocol integration patch is prepared and staged — interface stubs only, waiting on live infrastructure before activation.</p>
           <div class="card-meta">
             <span class="chip">Claude Code</span>
             <span class="chip">Cursor</span>
@@ -556,6 +558,33 @@
             Try the live demo
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg>
           </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="early-stage">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="section-tag">Early-stage</span>
+        <h2>Real code, not yet real infrastructure.</h2>
+        <p>Formal spec and reference implementation exist; the parts that need a live Ethereum client don't yet. Listed here so status is visible, not implied.</p>
+      </div>
+
+      <div class="projects">
+        <div class="card">
+          <div class="card-top">
+            <h3>kaysentinel</h3>
+            <span class="tag tag-early">early-stage · formal spec + partial implementation</span>
+          </div>
+          <p>A post-execution authorization framework for state-machine systems like Ethereum. Lifts execution traces into a canonical Structural Sufficient Representation (SSR) and evaluates policy over that quotient space, so authorization decisions don't depend on which client — Geth, Reth — produced the trace.</p>
+          <p>Formal specification is complete. Rust reference implementation has the canonical event ABI done (<span class="mono">cse</span>), the builder pipeline in progress (<span class="mono">builder</span> — partition → reduce → lifecycle resolution → certificate assembly, 21 passing tests), and domain-separated BLAKE3 commitments as a working primitive (<span class="mono">hash</span>, 8 passing tests, not yet cross-language-verified). SSZ encoding, storage-trie derivation, and the client extractors are still empty stubs.</p>
+          <div class="card-meta">
+            <span class="chip">Formal methods</span>
+            <span class="chip">EVM</span>
+            <span class="chip">Rust</span>
+            <span class="chip">MIT</span>
+          </div>
         </div>
       </div>
     </div>
